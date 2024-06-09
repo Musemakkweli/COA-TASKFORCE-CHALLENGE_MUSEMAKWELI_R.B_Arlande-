@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the webpage as displayed in the browser tab -->
+    <title> Interactive Photo Gallery</title>
+    <!-- Link to an external font resource hosted on a CDN -->
+    <link href="https://fonts.cdnfonts.com/css/d-din" rel="stylesheet">
+    <!-- Link to the local CSS file that provides styling for the webpage -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Introduction section of the webpage -->
+    <h1>Intro</h1>
+    
+    <div class="intro">
+        <div class="text">
+            <!-- Double line break to ensure ample spacing between sentences -->
+            <p>The designs represent both desktop and mobile views. <br><br>To view interactions: Run the designs in prototype mode.</p>
+        </div>
+    </div>
+
+    <!-- First gallery section showcasing various images -->
+    <div class="gallery-section">
+        <h2>Gallery 01</h2>
+        <div class="gallery gallery01">
+            <div class="gallery-item">
+                <img src="images/fennec-fox.png" alt="Fennec Fox">
+                <div class="heading">FENNEC FOX</div>
+                <div class="description">India</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/humpback-whale.png" alt="Humpback Whale">
+                <div class="heading">HUMPBACK WHALE</div>
+                <div class="description">South Africa</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/baboon.png" alt="Common Brown Baboon">
+                <div class="heading">COMMON BROWN BABOON</div>
+                <div class="description">South Africa</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/spotted-deer.png" alt="Spotted Deer">
+                <div class="heading">SPOTTED DEER</div>
+                <div class="description">Amazon</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third gallery section with smaller image items -->
+    <div class="gallery-section">
+        <h2>Gallery 03</h2>
+        <div class="gallery gallery03">
+            <div class="gallery-item small">
+                <img src="images/fennec-fox.png" alt="Fennec Fox">
+            </div>
+            <div class="gallery-item small">
+                <img src="images/humpback-whale.png" alt="Humpback Whale">
+            </div>
+            <div class="gallery-item small">
+                <img src="images/baboon.png" alt="Common Brown Baboon">
+            </div>
+            <div class="gallery-item small">
+                <img src="images/spotted-deer.png" alt="Spotted Deer">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal to display full-size images when clicked -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Link to the JavaScript file for enhancing interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>

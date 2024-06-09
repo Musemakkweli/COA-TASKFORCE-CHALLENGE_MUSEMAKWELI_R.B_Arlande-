@@ -1,0 +1,225 @@
+@import url('https://fonts.cdnfonts.com/css/d-din'); /* Importing external font 'D-DIN' for use in the webpage */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: grey;
+    margin: 20px 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    border: 2px solid yellow; 
+}
+
+/* Adjusts the layout and appearance of the galleries */
+.gallery.gallery03 {
+    display: inline-flex; 
+    justify-content: flex-start; 
+    gap: 0px; 
+    border: 2px solid yellow; 
+    padding: 0; 
+    margin: 0; 
+}
+
+/* Sets the dimensions for images in gallery 03 according to Figma design specifications */
+.gallery.gallery03 .gallery-item {
+    width: 98.5px;
+    height: 600px; 
+    flex: none; 
+}
+
+/* Styles for the introduction section, ensuring alignment and appearance match the Figma design */
+.intro {
+    background: #B22222;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+    max-width: 1140px;
+}
+
+.text:hover p {
+    text-decoration: underline;
+    text-decoration-color: rgb(24, 145, 193);
+}
+
+.gallery-section {
+    margin: 20px;
+}
+
+/* Configures the layout and appearance of images in gallery 01 */
+.gallery.gallery01 {
+    justify-content: flex-start; 
+    border: 2px solid yellow;
+    width: fit-content; 
+    margin: 0 auto; 
+}
+
+.gallery-item {
+    flex: 1 1 293px;
+    max-width: 293px;
+    height: 588px;
+    position: relative;
+    transition: transform 0.3s ease;
+    overflow: hidden; 
+}
+
+.gallery-item.small {
+    width: 98.5px;
+    height: 600px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    border: 4px solid rgb(129, 11, 153);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Positioning and styling for image captions */
+.heading, .description {
+    position: absolute;
+    color: white;
+    padding: 5px 10px;
+}
+
+.heading {
+    font-family: 'D-DIN', Arial, sans-serif;
+    bottom: 50px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 0.8;
+}
+
+.description {
+    font-family: 'Poppins', sans-serif;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Styles for the modal used to display full-size images */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    cursor: pointer;
+}
+
+/* Animation for zoom-in effect */
+@keyframes zoom {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
+}
+
+/* Responsive design adjustments to ensure compatibility across various devices */
+@media only screen and (max-width: 768px) {
+    .intro {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .text p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .gallery.gallery01 {
+        justify-content: flex-start; 
+        width: 100%; 
+    }
+
+    .gallery-item {
+        flex: 1 1 100%;
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .heading {
+        font-size: 20px;
+        bottom: 40px;
+    }
+
+    .description {
+        font-size: 10px;
+        bottom: 5px;
+    }
+
+    /* Adjustments for gallery 03 to ensure images are properly sized on smaller screens */
+    .gallery.gallery03 .gallery-item {
+        width: 25%; 
+        height: auto; 
+    }
+}
